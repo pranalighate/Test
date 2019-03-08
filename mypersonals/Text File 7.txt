@@ -1,0 +1,155 @@
+bash: User: command not found...
+[pranali@oc3342480422 amazon]$ cd root
+bash: cd: root: No such file or directory
+[pranali@oc3342480422 amazon]$ cd ../
+[pranali@oc3342480422 ~]$ cd ../
+[pranali@oc3342480422 home]$ ls
+pranali
+[pranali@oc3342480422 home]$ cd ../
+[pranali@oc3342480422 /]$ cd ..
+[pranali@oc3342480422 /]$ ls
+2  bin  boot  dev  etc  home  keyservice.log  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  sepap-install.log  sep-install.log  sepui-install.log  srv  sys  tmp  usr  var
+[pranali@oc3342480422 /]$ cd root
+bash: cd: root: Permission denied
+[pranali@oc3342480422 /]$ sudo cd root
+[sudo] password for pranali: 
+[pranali@oc3342480422 /]$ ls 
+2  bin  boot  dev  etc  home  keyservice.log  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  sepap-install.log  sep-install.log  sepui-install.log  srv  sys  tmp  usr  var
+[pranali@oc3342480422 /]$ cd root
+bash: cd: root: Permission denied
+[pranali@oc3342480422 /]$ sudo cd root
+[pranali@oc3342480422 /]$ ls
+2  bin  boot  dev  etc  home  keyservice.log  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  sepap-install.log  sep-install.log  sepui-install.log  srv  sys  tmp  usr  var
+[pranali@oc3342480422 /]$ pwd
+/
+[pranali@oc3342480422 /]$ ls
+2  bin  boot  dev  etc  home  keyservice.log  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  sepap-install.log  sep-install.log  sepui-install.log  srv  sys  tmp  usr  var
+[pranali@oc3342480422 /]$ ll
+total 264
+-rw-r--r--.   1 root root     52 May 30  2018 2
+lrwxrwxrwx.   1 root root      7 May 30  2018 bin -> usr/bin
+dr-xr-xr-x.   7 root root   4096 Jan 15 20:20 boot
+drwxr-xr-x.  21 root root   3400 Mar  4 10:38 dev
+drwxr-xr-x. 156 root root  12288 Mar  6 10:35 etc
+drwxr-xr-x.   3 root root   4096 Oct 26 14:57 home
+-rw-r--r--.   1 root root 181821 Mar  5 16:16 keyservice.log
+lrwxrwxrwx.   1 root root      7 May 30  2018 lib -> usr/lib
+lrwxrwxrwx.   1 root root      9 May 30  2018 lib64 -> usr/lib64
+drwx------.   2 root root  16384 May 30  2018 lost+found
+drwxr-xr-x.   2 root root   4096 Dec 14  2017 media
+drwxr-xr-x.   2 root root   4096 Dec 14  2017 mnt
+drwxr-xr-x.  16 root root   4096 Nov  5 15:16 opt
+dr-xr-xr-x. 329 root root      0 Mar  4 16:07 proc
+drwx------.  14 root root   4096 Mar  6 11:52 root
+drwxr-xr-x.  43 root root   1420 Mar  6 11:00 run
+lrwxrwxrwx.   1 root root      8 May 30  2018 sbin -> usr/sbin
+-rw-r--r--.   1 root root    445 May 30  2018 sepap-install.log
+-rw-r--r--.   1 root root    575 May 30  2018 sep-install.log
+-rw-r--r--.   1 root root    243 May 30  2018 sepui-install.log
+drwxr-xr-x.   2 root root   4096 Dec 14  2017 srv
+dr-xr-xr-x.  13 root root      0 Mar  4 10:37 sys
+drwxrwxrwt.  26 root root    640 Mar  6 12:39 tmp
+drwxr-xr-x.  15 root root   4096 May 30  2018 usr
+drwxr-xr-x.  23 root root   4096 Feb  4 14:15 var
+[pranali@oc3342480422 /]$ ls -a
+.   2    boot    dev  home            lib    lost+found  mnt  proc        root  sbin               sep-install.log    srv  tmp  var
+..  bin  .cache  etc  keyservice.log  lib64  media       opt  .readahead  run   sepap-install.log  sepui-install.log  sys  usr
+[pranali@oc3342480422 /]$ cd home/pranali/
+[pranali@oc3342480422 ~]$ ls
+amazon     Desktop  Documents  fontconfig  gamutkart2  lenovo  Music     pno     sound   stkeystore.p12  test    Videos
+derby.log  Distros  Downloads  gamutguru   git-        lotus   Pictures  Public  source  Templates       test23  workplace-tmp
+[pranali@oc3342480422 ~]$ cd amazon/
+[pranali@oc3342480422 amazon]$ mvn install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< amazon:amazon >----------------------------
+[INFO] Building amazon Maven Webapp 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ amazon ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ amazon ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ amazon ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/pranali/amazon/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ amazon ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ amazon ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ amazon ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [amazon] in [/home/pranali/amazon/target/amazon]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/pranali/amazon/src/main/webapp]
+[INFO] Webapp assembled in [53 msecs]
+[INFO] Building war: /home/pranali/amazon/target/amazon.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ amazon ---
+[INFO] Installing /home/pranali/amazon/target/amazon.war to /home/pranali/.m2/repository/amazon/amazon/1.0-SNAPSHOT/amazon-1.0-SNAPSHOT.war
+[INFO] Installing /home/pranali/amazon/pom.xml to /home/pranali/.m2/repository/amazon/amazon/1.0-SNAPSHOT/amazon-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.116 s
+[INFO] Finished at: 2019-03-06T12:46:56+05:30
+[INFO] ------------------------------------------------------------------------
+[pranali@oc3342480422 amazon]$ ls
+pom.xml  src  target
+[pranali@oc3342480422 amazon]$ cd target/
+[pranali@oc3342480422 target]$ ls
+amazon  amazon.war  classes  maven-archiver
+[pranali@oc3342480422 target]$ cd ../
+[pranali@oc3342480422 amazon]$ git add .
+[pranali@oc3342480422 amazon]$ git commit -m "target is added" .
+[master e623a72] target is added
+ 4 files changed, 17 insertions(+)
+ create mode 100644 target/amazon.war
+ create mode 100644 target/amazon/WEB-INF/web.xml
+ create mode 100644 target/amazon/index.jsp
+ create mode 100644 target/maven-archiver/pom.properties
+[pranali@oc3342480422 amazon]$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+nothing to commit, working directory clean
+[pranali@oc3342480422 amazon]$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+[pranali@oc3342480422 amazon]$ git log
+commit e623a7209431808848cef6621d13e56dcc715677
+Author: pranalighate <pranalighate22@gmail.com>
+Date:   Wed Mar 6 12:47:55 2019 +0530
+
+    target is added
+
+commit 34c193d094abfa2e9cea5e7b93cbdb433ee8c80f
+Author: pranalighate <pranalighate22@gmail.com>
+Date:   Wed Mar 6 12:19:02 2019 +0530
+
+    amazon project
+[pranali@oc3342480422 amazon]$ git remote add origin https://github.com/pranalighate/flipkart2.git
+fatal: remote origin already exists.
+[pranali@oc3342480422 amazon]$ git push
+Username for 'https://github.com': pranalighate
+Password for 'https://pranalighate@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.66 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/pranalighate/flipkart2.git
+   34c193d..e623a72  master -> master
+[pranali@oc3342480422 amazon]$ ^C
+[pranali@oc3342480422 amazon]$ 
+

@@ -1,0 +1,26 @@
+What happens if I delete .git folder
+
+
+
+What branching model you suggest for parellel development
+
+Developer fixes a bug. How do you take the change to 
+    production?
+
+Merge and Rebase
+
+
+What is the difference between branch and tag?
+	When do you create a branch and tag?
+
+What is HEAD pointer in Git? Where Git store HEAD info.
+
+Can we store binary files in Git
+
+How do you list files/folders modified as part of a commit
+
+
+52. How do you add a new remote to git? Or How do you attach
+	your local repo with remote?
+
+How do you clone a single folder / file? Or is it possible in Git?

@@ -1,0 +1,544 @@
+ubuntu@ip-172-31-18-177:~$ mkdir x
+ubuntu@ip-172-31-18-177:~$ cd x
+ubuntu@ip-172-31-18-177:~/x$ git clone https://github.com/pranalighate/git-.git
+Cloning into 'git-'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 21 (delta 1), reused 17 (delta 0), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+ubuntu@ip-172-31-18-177:~/x$ cd git-
+ubuntu@ip-172-31-18-177:~/x/git-$ vim a
+ubuntu@ip-172-31-18-177:~/x/git-$ git add a
+ubuntu@ip-172-31-18-177:~/x/git-$ git commit a-m "files"
+error: pathspec 'a-m' did not match any file(s) known to git.
+error: pathspec 'files' did not match any file(s) known to git.
+ubuntu@ip-172-31-18-177:~/x/git-$ git push
+Username for 'https://github.com': pranalighate
+Password for 'https://pranalighate@github.com': 
+Everything up-to-date
+ubuntu@ip-172-31-18-177:~/x/git-$ git push
+Everything up-to-date
+ubuntu@ip-172-31-18-177:~/x/git-$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir y
+ubuntu@ip-172-31-18-177:~$ cd y
+ubuntu@ip-172-31-18-177:~/y$ git clone https://github.com/pranalighate/git-.git
+Cloning into 'git-'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 21 (delta 1), reused 17 (delta 0), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+ubuntu@ip-172-31-18-177:~/y$ cd git-
+ubuntu@ip-172-31-18-177:~/y/git-$ git pull
+Already up to date.
+ubuntu@ip-172-31-18-177:~/y/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd x
+ubuntu@ip-172-31-18-177:~/x$ cd git-
+ubuntu@ip-172-31-18-177:~/x/git-$ vim a
+ubuntu@ip-172-31-18-177:~/x/git-$ git add a
+ubuntu@ip-172-31-18-177:~/x/git-$ git commit a -m "changes"
+[master 2468aa6] changes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 a
+ubuntu@ip-172-31-18-177:~/x/git-$ git push
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pranalighate/git-.git
+   a4ef020..2468aa6  master -> master
+ubuntu@ip-172-31-18-177:~/x/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd y
+ubuntu@ip-172-31-18-177:~/y$ cd git-
+ubuntu@ip-172-31-18-177:~/y/git-$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pranalighate/git-
+   a4ef020..2468aa6  master     -> origin/master
+Updating a4ef020..2468aa6
+Fast-forward
+ a | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 a
+ubuntu@ip-172-31-18-177:~/y/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd x
+ubuntu@ip-172-31-18-177:~/x$ cd git-
+ubuntu@ip-172-31-18-177:~/x/git-$ vim a
+ubuntu@ip-172-31-18-177:~/x/git-$ git add a
+ubuntu@ip-172-31-18-177:~/x/git-$ git commit a _m "changes"
+error: pathspec '_m' did not match any file(s) known to git.
+error: pathspec 'changes' did not match any file(s) known to git.
+ubuntu@ip-172-31-18-177:~/x/git-$ git commit a -m "changes"
+[master 95c0009] changes
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+ubuntu@ip-172-31-18-177:~/x/git-$ git push
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pranalighate/git-.git
+   2468aa6..95c0009  master -> master
+ubuntu@ip-172-31-18-177:~/x/git-$ git fetch
+ubuntu@ip-172-31-18-177:~/x/git-$ git fetch https://github.com/pranalighate/git-.git
+From https://github.com/pranalighate/git-
+ * branch            HEAD       -> FETCH_HEAD
+ubuntu@ip-172-31-18-177:~/x/git-$ ls -a
+.  ..  .git  README.md  a  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/x/git-$ git merge https://github.com/pranalighate/git-.git
+merge: https://github.com/pranalighate/git-.git - not something we can merge                                                                                                                                                                                                                    
+ubuntu@ip-172-31-18-177:~/x/git-$ git merge
+Already up to date.
+ubuntu@ip-172-31-18-177:~/x/git-$ vim d
+ubuntu@ip-172-31-18-177:~/x/git-$ git merge
+Already up to date.
+ubuntu@ip-172-31-18-177:~/x/git-$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir cc
+ubuntu@ip-172-31-18-177:~$ cd cc
+ubuntu@ip-172-31-18-177:~/cc$ 
+ubuntu@ip-172-31-18-177:~/cc$ git clone https://github.com/pranalighate/git-.gitCloning into 'git-'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 27 (delta 2), reused 22 (delta 0), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+ubuntu@ip-172-31-18-177:~/cc$ cd git-
+ubuntu@ip-172-31-18-177:~/cc/git-$ vim a
+ubuntu@ip-172-31-18-177:~/cc/git-$ vim b
+ubuntu@ip-172-31-18-177:~/cc/git-$ git add b
+ubuntu@ip-172-31-18-177:~/cc/git-$ git commit -m "file"
+[master b304b17] file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b
+ubuntu@ip-172-31-18-177:~/cc/git-$ git push
+Username for 'https://github.com': pranalighate
+Password for 'https://pranalighate@github.com': 
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 261 bytes | 261.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pranalighate/git-.git
+   95c0009..b304b17  master -> master
+ubuntu@ip-172-31-18-177:~/cc/git-$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir dd
+ubuntu@ip-172-31-18-177:~$ git clone https://github.com/pranalighate/git-.git
+fatal: destination path 'git-' already exists and is not an empty directory.
+ubuntu@ip-172-31-18-177:~$ cd dd
+ubuntu@ip-172-31-18-177:~/dd$ git clone https://github.com/pranalighate/git-.gitCloning into 'git-'...
+remote: Enumerating objects: 30, done.
+remote: Counting objects: 100% (30/30), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 30 (delta 3), reused 25 (delta 1), pack-reused 0
+Unpacking objects: 100% (30/30), done.
+ubuntu@ip-172-31-18-177:~/dd$ git pull
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-18-177:~/dd$ cd git-
+ubuntu@ip-172-31-18-177:~/dd/git-$ git pull
+Already up to date.
+ubuntu@ip-172-31-18-177:~/dd/git-$ git pull https://github.com/pranalighate/git-.git
+From https://github.com/pranalighate/git-
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+ubuntu@ip-172-31-18-177:~/dd/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/dd/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd cc
+ubuntu@ip-172-31-18-177:~/cc$ cd git-
+ubuntu@ip-172-31-18-177:~/cc/git-$ vim b
+ubuntu@ip-172-31-18-177:~/cc/git-$ git add b
+ubuntu@ip-172-31-18-177:~/cc/git-$ git commit b -m "changed"
+[master 0832864] changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ubuntu@ip-172-31-18-177:~/cc/git-$ git push
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 262 bytes | 262.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pranalighate/git-.git
+   b304b17..0832864  master -> master
+ubuntu@ip-172-31-18-177:~/cc/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd dd
+ubuntu@ip-172-31-18-177:~/dd$ cd git-
+ubuntu@ip-172-31-18-177:~/dd/git-$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pranalighate/git-
+   b304b17..0832864  master     -> origin/master
+Updating b304b17..0832864
+Fast-forward
+ b | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ubuntu@ip-172-31-18-177:~/dd/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/dd/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd cc
+ubuntu@ip-172-31-18-177:~/cc$ cd git-
+ubuntu@ip-172-31-18-177:~/cc/git-$ git fetch
+ubuntu@ip-172-31-18-177:~/cc/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/cc/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd dd
+ubuntu@ip-172-31-18-177:~/dd$ vim c
+ubuntu@ip-172-31-18-177:~/dd$ git add c
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-18-177:~/dd$ git commit c -m "dhj"
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-18-177:~/dd$ git push
+fatal: not a git repository (or any of the parent directories): .git
+ubuntu@ip-172-31-18-177:~/dd$ cd git-
+ubuntu@ip-172-31-18-177:~/dd/git-$ vim c
+ubuntu@ip-172-31-18-177:~/dd/git-$ git add c
+ubuntu@ip-172-31-18-177:~/dd/git-$ git commit c -m "fdhkjkj"
+[master 46acd6a] fdhkjkj
+ 1 file changed, 1 insertion(+)
+ create mode 100644 c
+ubuntu@ip-172-31-18-177:~/dd/git-$ git push
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 256 bytes | 256.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pranalighate/git-.git
+   0832864..46acd6a  master -> master
+ubuntu@ip-172-31-18-177:~/dd/git-$ cd
+ubuntu@ip-172-31-18-177:~$ cd cc
+ubuntu@ip-172-31-18-177:~/cc$ ls -a
+.  ..  git-
+ubuntu@ip-172-31-18-177:~/cc$ cd git-
+ubuntu@ip-172-31-18-177:~/cc/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/cc/git-$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pranalighate/git-
+   0832864..46acd6a  master     -> origin/master
+ubuntu@ip-172-31-18-177:~/cc/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/cc/git-$ git fetch https://github.com/pranalighate/git-.git
+From https://github.com/pranalighate/git-
+ * branch            HEAD       -> FETCH_HEAD
+ubuntu@ip-172-31-18-177:~/cc/git-$ ls -a
+.  ..  .git  README.md  a  b  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/cc/git-$ git merge
+Updating 0832864..46acd6a
+Fast-forward
+ c | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 c
+ubuntu@ip-172-31-18-177:~/cc/git-$ ls -a
+.  ..  .git  README.md  a  b  c  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/cc/git-$ git push
+Everything up-to-date
+ubuntu@ip-172-31-18-177:~/cc/git-$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir a1
+ubuntu@ip-172-31-18-177:~$ mkdir a2
+ubuntu@ip-172-31-18-177:~$ cd a1
+ubuntu@ip-172-31-18-177:~/a1$ git clone https://github.com/pranalighate/git-.gitCloning into 'git-'...
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 36 (delta 6), reused 28 (delta 1), pack-reused 0
+Unpacking objects: 100% (36/36), done.
+ubuntu@ip-172-31-18-177:~/a1$ cd git-
+ubuntu@ip-172-31-18-177:~/a1/git-$ ls -a
+.  ..  .git  README.md  a  b  c  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/a1/git-$ rm -rf a
+ubuntu@ip-172-31-18-177:~/a1/git-$ git add .
+ubuntu@ip-172-31-18-177:~/a1/git-$ git commit -m "gfhjj"
+[master 428f662] gfhjj
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 a
+ubuntu@ip-172-31-18-177:~/a1/git-$ git push
+Counting objects: 2, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 218 bytes | 218.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pranalighate/git-.git
+   46acd6a..428f662  master -> master
+ubuntu@ip-172-31-18-177:~/a1/git-$ git clone https://github.com/pranalighate/git-.git
+Cloning into 'git-'...
+remote: Enumerating objects: 38, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 38 (delta 7), reused 30 (delta 2), pack-reused 0
+Unpacking objects: 100% (38/38), done.
+ubuntu@ip-172-31-18-177:~/a1/git-$ ls -a
+.  ..  .git  README.md  b  c  git-  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/a1/git-$ git log
+commit 428f662f28fa278febf21bd7886db6d0e0784169 (HEAD -> master, origin/master, origin/HEAD)
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:56:07 2019 +0000
+
+    gfhjj
+
+commit 46acd6a4dfc31696d12b95527ce200290508f917
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:47:43 2019 +0000
+
+    fdhkjkj
+
+commit 08328641356bfc17c11cddbff40a3b0a220ea3b9
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:43:29 2019 +0000
+
+    changed
+
+commit b304b1741c96cfc73514b424830d5bf152324af9
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:39:55 2019 +0000
+
+:...skipping...
+commit 428f662f28fa278febf21bd7886db6d0e0784169 (HEAD -> master, origin/master, origin/HEAD)
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:56:07 2019 +0000
+
+    gfhjj
+
+commit 46acd6a4dfc31696d12b95527ce200290508f917
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:47:43 2019 +0000
+
+    fdhkjkj
+
+commit 08328641356bfc17c11cddbff40a3b0a220ea3b9
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:43:29 2019 +0000
+
+    changed
+
+commit b304b1741c96cfc73514b424830d5bf152324af9
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:39:55 2019 +0000
+
+    file
+
+commit 95c0009b90d80c7759dfa1cca0b83978445dbc14
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:24:32 2019 +0000
+
+    changes
+
+commit 2468aa64160c4f526e8ffc80f5ad93c622fbfcaf
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 05:17:16 2019 +0000
+
+    changes
+
+commit a4ef020e51a52fb1bdb49a0338aa265b28f27321
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 14:39:40 2019 +0000
+
+    printing
+
+commit 5210909c4b8e8125680b32fa504c0396f0c0f93b
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 14:34:59 2019 +0000
+
+    changes are made
+
+commit 167c12b2053573f19d51fe6b8f47a72928892de0
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 14:32:39 2019 +0000
+
+    files are modified
+
+commit d0c2ad27b25db281efc35fc17ae4c8f6bff4d9a2
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 14:23:19 2019 +0000
+
+    modification
+
+commit 25b252b40e60778203cca30ebb6aed0d605f7b68
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 14:10:33 2019 +0000
+
+    modification
+
+commit 9e0df9821b3788383d01c7c91fd6d033cd0c7c0d
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Thu Feb 7 13:55:40 2019 +0000
+
+    hello
+
+commit e0a40f25daaedaec2577ce4a71d0055a4aabff49
+Author: pranalighate <46988296+pranalighate@users.noreply.github.com>
+Date:   Thu Feb 7 19:18:41 2019 +0530
+
+    Initial commit
+ubuntu@ip-172-31-18-177:~/a1/git-$ 
+ubuntu@ip-172-31-18-177:~/a1/git-$ git checkout 46acd6a4df
+Note: checking out '46acd6a4df'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 46acd6a fdhkjkj
+ubuntu@ip-172-31-18-177:~/a1/git-$ ls -a
+.  ..  .git  README.md  a  b  c  git-  login.java  payment.java
+ubuntu@ip-172-31-18-177:~/a1/git-$ cds
+
+Command 'cds' not found, but there are 16 similar ones.
+
+ubuntu@ip-172-31-18-177:~/a1/git-$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir x1
+ubuntu@ip-172-31-18-177:~$ cd x1
+ubuntu@ip-172-31-18-177:~/x1$ 
+ubuntu@ip-172-31-18-177:~/x1$ git clone https://github.com/pranalighate/practice.git
+Cloning into 'practice'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+ubuntu@ip-172-31-18-177:~/x1$ cd practice/
+ubuntu@ip-172-31-18-177:~/x1/practice$ touch a
+ubuntu@ip-172-31-18-177:~/x1/practice$ touch b
+ubuntu@ip-172-31-18-177:~/x1/practice$ touch c
+ubuntu@ip-172-31-18-177:~/x1/practice$ git add .
+ubuntu@ip-172-31-18-177:~/x1/practice$ git commit -m "ghklll"
+[master adace36] ghklll
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a
+ create mode 100644 b
+ create mode 100644 c
+ubuntu@ip-172-31-18-177:~/x1/practice$ git push
+Username for 'https://github.com': pranalighate
+Password for 'https://pranalighate@github.com': 
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pranalighate/practice.git
+   6aae540..adace36  master -> master
+ubuntu@ip-172-31-18-177:~/x1/practice$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir x2
+ubuntu@ip-172-31-18-177:~$ cd x2
+ubuntu@ip-172-31-18-177:~/x2$ git clone https://github.com/pranalighate/practice.git
+Cloning into 'practice'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+ubuntu@ip-172-31-18-177:~/x2$ ls -a
+.  ..  practice
+ubuntu@ip-172-31-18-177:~/x2$ ls
+practice
+ubuntu@ip-172-31-18-177:~/x2$ cd practice
+ubuntu@ip-172-31-18-177:~/x2/practice$ ls -a
+.  ..  .git  README.md  a  b  c
+ubuntu@ip-172-31-18-177:~/x2/practice$ rm a
+ubuntu@ip-172-31-18-177:~/x2/practice$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    a
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-172-31-18-177:~/x2/practice$ git add .
+ubuntu@ip-172-31-18-177:~/x2/practice$ git commit -m "gjklkk"
+[master 5a7c537] gjklkk
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 a
+ubuntu@ip-172-31-18-177:~/x2/practice$ git push
+Counting objects: 2, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 224 bytes | 224.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/pranalighate/practice.git
+   adace36..5a7c537  master -> master
+ubuntu@ip-172-31-18-177:~/x2/practice$ ls -a
+.  ..  .git  README.md  b  c
+ubuntu@ip-172-31-18-177:~/x2/practice$ git log
+commit 5a7c5371692cfab9add51490e59aa1188d26d7aa (HEAD -> master, origin/master, origin/HEAD)
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 06:22:27 2019 +0000
+
+    gjklkk
+
+commit adace36ed93cf8430798eaf8f1b00b019aa62c90
+Author: Pranali <pranalighate22@gmail.com>
+Date:   Fri Feb 8 06:18:07 2019 +0000
+
+    ghklll
+
+commit 6aae54028444602c886fb9eb958f9c53b830de25
+Author: pranalighate <46988296+pranalighate@users.noreply.github.com>
+Date:   Fri Feb 8 11:45:59 2019 +0530
+
+    Initial commit
+ubuntu@ip-172-31-18-177:~/x2/practice$ ^C
+ubuntu@ip-172-31-18-177:~/x2/practice$ git checkout adace36ed9
+Note: checking out 'adace36ed9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at adace36 ghklll
+ubuntu@ip-172-31-18-177:~/x2/practice$ ls -a
+.  ..  .git  README.md  a  b  c
+ubuntu@ip-172-31-18-177:~/x2/practice$ mkdir w
+ubuntu@ip-172-31-18-177:~/x2/practice$ cd
+ubuntu@ip-172-31-18-177:~$ mkdir x3
+ubuntu@ip-172-31-18-177:~$ cd x3
+ubuntu@ip-172-31-18-177:~/x3$ git clone https://github.com/pranalighate/practice.git
+Cloning into 'practice'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 1), reused 5 (delta 1), pack-reused 0
+Unpacking objects: 100% (8/8), done.
+ubuntu@ip-172-31-18-177:~/x3$ ls -a
+.  ..  practice
+ubuntu@ip-172-31-18-177:~/x3$ cd practice/
+ubuntu@ip-172-31-18-177:~/x3/practice$ ls -a
+.  ..  .git  README.md  b  c
+ubuntu@ip-172-31-18-177:~/x3/practice$ pwd
+/home/ubuntu/x3/practice
+ubuntu@ip-172-31-18-177:~/x3/practice$ cd
+ubuntu@ip-172-31-18-177:~$ x2
+x2: command not found
+ubuntu@ip-172-31-18-177:~$ cd
+ubuntu@ip-172-31-18-177:~$ cd x2
+ubuntu@ip-172-31-18-177:~/x2$ cd practice/
+ubuntu@ip-172-31-18-177:~/x2/practice$ ls -a
+.  ..  .git  README.md  a  b  c  w
+ubuntu@ip-172-31-18-177:~/x2/practice$ scp a /home/ubuntu/x3/practice\
+> ls -a^C
+ubuntu@ip-172-31-18-177:~/x2/practice$ scp a /home/ubuntu/x3/practice
+ubuntu@ip-172-31-18-177:~/x2/practice$ cd
+ubuntu@ip-172-31-18-177:~$ cd x3
+ubuntu@ip-172-31-18-177:~/x3$ cd practice/
+ubuntu@ip-172-31-18-177:~/x3/practice$ ls -a
+.  ..  .git  README.md  a  b  c
+ubuntu@ip-172-31-18-177:~/x3/practice$ packet_write_wait: Connection to 18.219.78.205 port 22: Broken pipe
+[pranali@oc3342480422 Desktop]$ 
+

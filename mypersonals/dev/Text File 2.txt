@@ -1,0 +1,797 @@
+[pranali@oc3342480422 ~]$ cd Desktop
+[pranali@oc3342480422 Desktop]$ mkdir Source/
+mkdir: cannot create directory ‘Source/’: File exists
+[pranali@oc3342480422 Desktop]$ mkdir ppt
+[pranali@oc3342480422 Desktop]$ cd ppt
+[pranali@oc3342480422 ppt]$ git clone https://github.com/nageshvkn/gamutkart2.git
+Cloning into 'gamutkart2'...
+fatal: unable to access 'https://github.com/nageshvkn/gamutkart2.git/': Could not resolve host: github.com; Unknown error
+[pranali@oc3342480422 ppt]$ cd gamutkart2
+bash: cd: gamutkart2: No such file or directory
+[pranali@oc3342480422 ppt]$ ls
+[pranali@oc3342480422 ppt]$ cd
+[pranali@oc3342480422 ~]$ cd Desktop/
+[pranali@oc3342480422 Desktop]$ mkdir report
+[pranali@oc3342480422 Desktop]$ cd report
+[pranali@oc3342480422 report]$ git clone https://github.com/nageshvkn/gamutkart2.git
+Cloning into 'gamutkart2'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 495 (delta 4), reused 16 (delta 3), pack-reused 477
+Receiving objects: 100% (495/495), 103.86 KiB | 89.00 KiB/s, done.
+Resolving deltas: 100% (175/175), done.
+[pranali@oc3342480422 report]$ ls -a
+.  ..  gamutkart2
+[pranali@oc3342480422 report]$ cd gamutkart2
+[pranali@oc3342480422 gamutkart2]$ mvn install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.gamutgurus:gamutkart >----------------------
+[INFO] Building gamutkart 1.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gamutkart ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/pranali/Desktop/report/gamutkart2/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gamutkart ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/pranali/Desktop/report/gamutkart2/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gamutkart ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/pranali/Desktop/report/gamutkart2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gamutkart ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/pranali/Desktop/report/gamutkart2/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gamutkart ---
+[INFO] Surefire report directory: /home/pranali/Desktop/report/gamutkart2/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.gamutkart.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ gamutkart ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [gamutkart] in [/home/pranali/Desktop/report/gamutkart2/target/gamutkart]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/pranali/Desktop/report/gamutkart2/src/main/webapp]
+[INFO] Webapp assembled in [79 msecs]
+[INFO] Building war: /home/pranali/Desktop/report/gamutkart2/target/gamutkart.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ gamutkart ---
+[INFO] Installing /home/pranali/Desktop/report/gamutkart2/target/gamutkart.war to /home/pranali/.m2/repository/com/gamutgurus/gamutkart/1.1-SNAPSHOT/gamutkart-1.1-SNAPSHOT.war
+[INFO] Installing /home/pranali/Desktop/report/gamutkart2/pom.xml to /home/pranali/.m2/repository/com/gamutgurus/gamutkart/1.1-SNAPSHOT/gamutkart-1.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.441 s
+[INFO] Finished at: 2019-03-01T11:24:59+05:30
+[INFO] ------------------------------------------------------------------------
+[pranali@oc3342480422 gamutkart2]$ ls
+chef  create-env.sh  deploy.sh  Docker  Dockerfile  Jenkinsfile  Jenkinsfile_slave  multi_deploy.sh  pom.xml  src  target
+[pranali@oc3342480422 gamutkart2]$ pwd
+/home/pranali/Desktop/report/gamutkart2
+[pranali@oc3342480422 gamutkart2]$ cd 
+[pranali@oc3342480422 ~]$ cd Distros
+[pranali@oc3342480422 Distros]$ pwd
+/home/pranali/Distros
+[pranali@oc3342480422 Distros]$ scp -r jdk-8u201-linux-x64.tar.gz pranali@172.17.0.6:/home/pranali/Distros  
+The authenticity of host '172.17.0.6 (172.17.0.6)' can't be established.
+ECDSA key fingerprint is SHA256:NCyqqyHni2bZ12Gtq4/YPces2fsBc0JKIMDog6lK+3g.
+ECDSA key fingerprint is MD5:f8:05:c5:46:32:29:8c:c0:59:9a:6d:47:32:5f:f3:d8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added '172.17.0.6' (ECDSA) to the list of known hosts.
+pranali@172.17.0.6's password: 
+jdk-8u201-linux-x64.tar.gz                                                                                                                                                100%  183MB 121.3MB/s   00:01    
+[pranali@oc3342480422 Distros]$ scp apache-tomcat-8.5.38(1).tar.gz pranali@172.17.0.6:/home/pranali/Distros 
+bash: syntax error near unexpected token `('
+[pranali@oc3342480422 Distros]$ scp apache-tomcat-8.5.38 pranali@172.17.0.6:/home/pranali/Distros 
+pranali@172.17.0.6's password: 
+apache-tomcat-8.5.38: not a regular file
+[pranali@oc3342480422 Distros]$ scp -rp apache-tomcat-8.5.38 pranali@172.17.0.6:/home/pranali/Distros 
+pranali@172.17.0.6's password: 
+BUILDING.txt                                                                                                                                                              100%   19KB   7.9MB/s   00:00    
+CONTRIBUTING.md                                                                                                                                                           100% 6090     4.0MB/s   00:00    
+commons-daemon-native.tar.gz                                                                                                                                              100%  202KB  17.4MB/s   00:00    
+configtest.sh                                                                                                                                                             100% 1922     1.5MB/s   00:00    
+version.sh                                                                                                                                                                100% 1908     1.8MB/s   00:00    
+digest.sh                                                                                                                                                                 100% 1965     1.3MB/s   00:00    
+daemon.sh                                                                                                                                                                 100% 8508     3.1MB/s   00:00    
+commons-daemon.jar                                                                                                                                                        100%   25KB   7.8MB/s   00:00    
+version.bat                                                                                                                                                               100% 2026     3.2MB/s   00:00    
+tool-wrapper.bat                                                                                                                                                          100% 4574     7.3MB/s   00:00    
+bootstrap.jar                                                                                                                                                             100%   34KB  24.0MB/s   00:00    
+startup.bat                                                                                                                                                               100% 2022     3.2MB/s   00:00    
+catalina.bat                                                                                                                                                              100%   16KB  19.6MB/s   00:00    
+tomcat-juli.jar                                                                                                                                                           100%   48KB  40.1MB/s   00:00    
+catalina.sh                                                                                                                                                               100%   24KB  27.9MB/s   00:00    
+shutdown.sh                                                                                                                                                               100% 1902     2.9MB/s   00:00    
+shutdown.bat                                                                                                                                                              100% 2020     3.5MB/s   00:00    
+configtest.bat                                                                                                                                                            100% 2040     2.8MB/s   00:00    
+setclasspath.bat                                                                                                                                                          100% 3460     1.7MB/s   00:00    
+digest.bat                                                                                                                                                                100% 2091     1.8MB/s   00:00    
+catalina-tasks.xml                                                                                                                                                        100% 1664     2.8MB/s   00:00    
+tool-wrapper.sh                                                                                                                                                           100% 5515     8.6MB/s   00:00    
+setclasspath.sh                                                                                                                                                           100% 3680     6.8MB/s   00:00    
+startup.sh                                                                                                                                                                100% 1904     3.3MB/s   00:00    
+tomcat-native.tar.gz                                                                                                                                                      100%  409KB  56.4MB/s   00:00    
+tomcat-jdbc.jar                                                                                                                                                           100%  145KB  60.2MB/s   00:00    
+ecj-4.6.3.jar                                                                                                                                                             100% 2393KB  77.5MB/s   00:00    
+jasper.jar                                                                                                                                                                100%  582KB  79.4MB/s   00:00    
+tomcat-dbcp.jar                                                                                                                                                           100%  273KB  67.2MB/s   00:00    
+tomcat-websocket.jar                                                                                                                                                      100%  221KB  35.3MB/s   00:00    
+tomcat-i18n-fr.jar                                                                                                                                                        100%   40KB  32.9MB/s   00:00    
+jsp-api.jar                                                                                                                                                               100%   60KB  42.0MB/s   00:00    
+tomcat-i18n-ja.jar                                                                                                                                                        100%   41KB  22.4MB/s   00:00    
+servlet-api.jar                                                                                                                                                           100%  238KB  80.7MB/s   00:00    
+tomcat-jni.jar                                                                                                                                                            100%   34KB  31.7MB/s   00:00    
+catalina-storeconfig.jar                                                                                                                                                  100%   76KB  50.0MB/s   00:00    
+jaspic-api.jar                                                                                                                                                            100%   26KB  28.3MB/s   00:00    
+jasper-el.jar                                                                                                                                                             100%  161KB  71.3MB/s   00:00    
+catalina-ha.jar                                                                                                                                                           100%  116KB  41.9MB/s   00:00    
+catalina-tribes.jar                                                                                                                                                       100%  286KB  40.1MB/s   00:00    
+tomcat-i18n-ru.jar                                                                                                                                                        100%   12KB  14.4MB/s   00:00    
+tomcat-util.jar                                                                                                                                                           100%  142KB  58.4MB/s   00:00    
+el-api.jar                                                                                                                                                                100%   84KB  50.9MB/s   00:00    
+tomcat-coyote.jar                                                                                                                                                         100%  804KB 105.5MB/s   00:00    
+catalina.jar                                                                                                                                                              100% 1613KB  75.2MB/s   00:00    
+tomcat-api.jar                                                                                                                                                            100%   10KB   9.2MB/s   00:00    
+catalina-ant.jar                                                                                                                                                          100%   53KB  36.4MB/s   00:00    
+annotations-api.jar                                                                                                                                                       100%   12KB  16.5MB/s   00:00    
+websocket-api.jar                                                                                                                                                         100%   37KB  32.2MB/s   00:00    
+tomcat-i18n-es.jar                                                                                                                                                        100%   65KB  18.0MB/s   00:00    
+tomcat-util-scan.jar                                                                                                                                                      100%  206KB  55.3MB/s   00:00    
+LICENSE                                                                                                                                                                   100%   56KB  26.0MB/s   00:00    
+NOTICE                                                                                                                                                                    100% 1726     1.2MB/s   00:00    
+RUNNING.txt                                                                                                                                                               100%   16KB   8.8MB/s   00:00    
+index_jsp.class                                                                                                                                                           100%   11KB  14.7MB/s   00:00    
+index_jsp.java                                                                                                                                                            100%   12KB  15.1MB/s   00:00    
+index_jsp.class                                                                                                                                                           100% 5311     7.6MB/s   00:00    
+index_jsp.java                                                                                                                                                            100% 4645     7.3MB/s   00:00    
+index_jsp.class                                                                                                                                                           100% 5311     4.2MB/s   00:00    
+index_jsp.java                                                                                                                                                            100% 4645     2.6MB/s   00:00    
+safeToDelete.tmp                                                                                                                                                          100%    0     0.0KB/s   00:00    
+README.md                                                                                                                                                                 100% 3255     6.0MB/s   00:00    
+catalina                                                                                                                                                                  100%    0     0.0KB/s   00:00    
+localhost.2019-02-26.log                                                                                                                                                  100% 4134     6.1MB/s   00:00    
+manager.2019-02-24.log                                                                                                                                                    100%    0     0.0KB/s   00:00    
+catalina.2019-02-24.log                                                                                                                                                   100%   29KB  17.8MB/s   00:00    
+manager.2019-02-26.log                                                                                                                                                    100%    0     0.0KB/s   00:00    
+catalina.2019-02-26.log                                                                                                                                                   100%   72KB  42.1MB/s   00:00    
+catalina.out                                                                                                                                                              100%  101KB  29.5MB/s   00:00    
+host-manager.2019-02-26.log                                                                                                                                               100%    0     0.0KB/s   00:00    
+host-manager.2019-02-24.log                                                                                                                                               100%    0     0.0KB/s   00:00    
+localhost.2019-02-24.log                                                                                                                                                  100% 1928   898.4KB/s   00:00    
+localhost_access_log.2019-02-24.txt                                                                                                                                       100%  495   860.3KB/s   00:00    
+localhost_access_log.2019-02-26.txt                                                                                                                                       100% 3007     4.5MB/s   00:00    
+RELEASE-NOTES                                                                                                                                                             100% 7142    10.6MB/s   00:00    
+gamutkart.war                                                                                                                                                             100%  147KB  54.9MB/s   00:00    
+context.xml                                                                                                                                                               100% 1338     1.5MB/s   00:00    
+catalina.policy                                                                                                                                                           100%   13KB  16.4MB/s   00:00    
+logging.properties                                                                                                                                                        100% 3916     6.6MB/s   00:00    
+tomcat-users.xsd                                                                                                                                                          100% 2633     3.7MB/s   00:00    
+server.xml                                                                                                                                                                100% 7511     9.5MB/s   00:00    
+jaspic-providers.xml                                                                                                                                                      100% 1149     1.0MB/s   00:00    
+web.xml                                                                                                                                                                   100%  165KB  40.0MB/s   00:00    
+catalina.properties                                                                                                                                                       100% 7746    10.3MB/s   00:00    
+tomcat-users.xml                                                                                                                                                          100% 2164     3.6MB/s   00:00    
+jaspic-providers.xsd                                                                                                                                                      100% 2313     4.3MB/s   00:00    
+RELEASE-NOTES.txt                                                                                                                                                         100% 7142    11.7MB/s   00:00    
+tomcat.svg                                                                                                                                                                100%   66KB  21.5MB/s   00:00    
+tomcat.gif                                                                                                                                                                100% 2066     3.5MB/s   00:00    
+tomcat.css                                                                                                                                                                100% 5581     8.9MB/s   00:00    
+bg-nav.png                                                                                                                                                                100% 1401     2.6MB/s   00:00    
+favicon.ico                                                                                                                                                               100%   21KB  24.6MB/s   00:00    
+bg-button.png                                                                                                                                                             100%  713     1.5MB/s   00:00    
+bg-nav-item.png                                                                                                                                                           100% 1392     2.4MB/s   00:00    
+bg-upper.png                                                                                                                                                              100% 3103     5.3MB/s   00:00    
+web.xml                                                                                                                                                                   100% 1227     1.2MB/s   00:00    
+tomcat.png                                                                                                                                                                100% 5103     3.9MB/s   00:00    
+asf-logo-wide.svg                                                                                                                                                         100%   27KB  13.7MB/s   00:00    
+bg-middle.png                                                                                                                                                             100% 1918     3.6MB/s   00:00    
+tomcat-power.gif                                                                                                                                                          100% 2376     4.6MB/s   00:00    
+index.jsp                                                                                                                                                                 100%   12KB  16.0MB/s   00:00    
+index.html                                                                                                                                                                100% 1126     2.2MB/s   00:00    
+index.xhtml                                                                                                                                                               100% 1268     2.2MB/s   00:00    
+snake.xhtml                                                                                                                                                               100% 9371     6.8MB/s   00:00    
+echo.xhtml                                                                                                                                                                100% 7064    11.4MB/s   00:00    
+drawboard.xhtml                                                                                                                                                           100%   40KB  38.2MB/s   00:00    
+chat.xhtml                                                                                                                                                                100% 4562     7.8MB/s   00:00    
+taglibs-standard-impl-1.2.5.jar                                                                                                                                           100%  202KB  38.7MB/s   00:00    
+taglibs-standard-spec-1.2.5.jar                                                                                                                                           100%   39KB  19.3MB/s   00:00    
+helloWorld.tag                                                                                                                                                            100%  801     1.4MB/s   00:00    
+displayProducts.tag                                                                                                                                                       100% 2049     4.0MB/s   00:00    
+panel.tag                                                                                                                                                                 100% 1045     2.0MB/s   00:00    
+web.xml                                                                                                                                                                   100%   14KB  13.6MB/s   00:00    
+debug-taglib.tld                                                                                                                                                          100% 1987     2.1MB/s   00:00    
+Clock2.java                                                                                                                                                               100% 7806    12.3MB/s   00:00    
+example-taglib.tld                                                                                                                                                        100% 3147     6.4MB/s   00:00    
+jsp2-example-taglib.tld                                                                                                                                                   100% 4882     8.7MB/s   00:00    
+DummyCart.class                                                                                                                                                           100% 1566     3.2MB/s   00:00    
+DummyCart.java                                                                                                                                                            100% 1813     3.6MB/s   00:00    
+RequestInfoExample.class                                                                                                                                                  100% 3298     5.5MB/s   00:00    
+ExampleFilter.class                                                                                                                                                       100% 2281     3.8MB/s   00:00    
+ExampleFilter.java                                                                                                                                                        100% 4212     3.6MB/s   00:00    
+Smart.class                                                                                                                                                               100%  521   699.3KB/s   00:00    
+Smart.java                                                                                                                                                                100%  997   961.3KB/s   00:00    
+CheckTest.java                                                                                                                                                            100% 1014   874.4KB/s   00:00    
+CheckTest.class                                                                                                                                                           100%  604   323.8KB/s   00:00    
+RequestHeaderExample.class                                                                                                                                                100% 3617     5.6MB/s   00:00    
+RequestInfoExample.java                                                                                                                                                   100% 4351     7.5MB/s   00:00    
+RequestParamExample.java                                                                                                                                                  100% 4083     7.7MB/s   00:00    
+FooTagExtraInfo.class                                                                                                                                                     100%  658     1.3MB/s   00:00    
+ExampleTagBase.java                                                                                                                                                       100% 2042     3.2MB/s   00:00    
+FooTagExtraInfo.java                                                                                                                                                      100% 1316     2.6MB/s   00:00    
+ValuesTag.java                                                                                                                                                            100% 2571     4.9MB/s   00:00    
+LogTag.class                                                                                                                                                              100% 1522     3.1MB/s   00:00    
+LogTag.java                                                                                                                                                               100% 1853     3.2MB/s   00:00    
+ValuesTag.class                                                                                                                                                           100% 2063     3.6MB/s   00:00    
+FooTag.java                                                                                                                                                               100% 2310     2.9MB/s   00:00    
+ExampleTagBase.class                                                                                                                                                      100% 1400   698.3KB/s   00:00    
+FooTag.class                                                                                                                                                              100% 1926     2.2MB/s   00:00    
+RequestParamExample.class                                                                                                                                                 100% 3247     5.0MB/s   00:00    
+ByteCounter$1.class                                                                                                                                                       100%  208   134.4KB/s   00:00    
+ByteCounter.java                                                                                                                                                          100% 5204     7.9MB/s   00:00    
+NumberWriter.java                                                                                                                                                         100% 5352     8.8MB/s   00:00    
+NumberWriter$NumberWriterListener.class                                                                                                                                   100% 3075     6.0MB/s   00:00    
+ByteCounter$CounterListener.class                                                                                                                                         100% 2741     5.2MB/s   00:00    
+NumberWriter.class                                                                                                                                                        100% 1577     2.7MB/s   00:00    
+ByteCounter.class                                                                                                                                                         100% 1822     2.7MB/s   00:00    
+NumberWriter$1.class                                                                                                                                                      100%  211   436.1KB/s   00:00    
+DebugValidator.java                                                                                                                                                       100% 2837     5.5MB/s   00:00    
+DebugValidator.class                                                                                                                                                      100% 1539     2.9MB/s   00:00    
+HelloWorldExample.class                                                                                                                                                   100% 2234     4.0MB/s   00:00    
+JspCalendar.java                                                                                                                                                          100% 4195     5.9MB/s   00:00    
+JspCalendar.class                                                                                                                                                         100% 4143     6.1MB/s   00:00    
+LocalStrings.properties                                                                                                                                                   100% 2027     1.5MB/s   00:00    
+LocalStrings_fr.properties                                                                                                                                                100% 2263     2.2MB/s   00:00    
+Room.java                                                                                                                                                                 100%   16KB   7.9MB/s   00:00    
+DrawboardContextListener.java                                                                                                                                             100% 1346     2.4MB/s   00:00    
+Client.class                                                                                                                                                              100% 4964     8.5MB/s   00:00    
+Room$Player.class                                                                                                                                                         100% 3893     7.2MB/s   00:00    
+DrawMessage$ParseException.class                                                                                                                                          100%  688     1.4MB/s   00:00    
+DrawboardEndpoint$3$1.class                                                                                                                                               100% 2521     4.9MB/s   00:00    
+DrawMessage.java                                                                                                                                                          100% 7170    11.0MB/s   00:00    
+DrawMessage.class                                                                                                                                                         100% 5556     9.3MB/s   00:00    
+Room$1$1.class                                                                                                                                                            100%  725     1.4MB/s   00:00    
+DrawboardEndpoint.java                                                                                                                                                    100% 9111    12.9MB/s   00:00    
+Room$MessageType.class                                                                                                                                                    100% 1454     2.8MB/s   00:00    
+Client.java                                                                                                                                                               100% 9194    13.6MB/s   00:00    
+Client$1.class                                                                                                                                                            100% 1774     3.1MB/s   00:00    
+DrawboardEndpoint.class                                                                                                                                                   100% 3908     2.4MB/s   00:00    
+DrawboardContextListener.class                                                                                                                                            100%  890   793.2KB/s   00:00    
+Room$1.class                                                                                                                                                              100%  747   865.7KB/s   00:00    
+DrawboardEndpoint$2.class                                                                                                                                                 100% 1590     1.0MB/s   00:00    
+Room$2.class                                                                                                                                                              100%  899   572.3KB/s   00:00    
+Room.class                                                                                                                                                                100% 8278    11.3MB/s   00:00    
+StringWebsocketMessage.java                                                                                                                                               100% 1171     2.3MB/s   00:00    
+BinaryWebsocketMessage.java                                                                                                                                               100% 1202     2.3MB/s   00:00    
+StringWebsocketMessage.class                                                                                                                                              100%  583     1.1MB/s   00:00    
+AbstractWebsocketMessage.class                                                                                                                                            100%  359   729.9KB/s   00:00    
+BinaryWebsocketMessage.class                                                                                                                                              100%  590     1.2MB/s   00:00    
+CloseWebsocketMessage.java                                                                                                                                                100%  993     2.0MB/s   00:00    
+CloseWebsocketMessage.class                                                                                                                                               100%  389   803.0KB/s   00:00    
+AbstractWebsocketMessage.java                                                                                                                                             100% 1005     2.0MB/s   00:00    
+DrawboardEndpoint$3.class                                                                                                                                                 100% 1279     2.5MB/s   00:00    
+DrawboardEndpoint$1.class                                                                                                                                                 100% 2158     3.8MB/s   00:00    
+ExamplesConfig.java                                                                                                                                                       100% 2363     4.0MB/s   00:00    
+ChatAnnotation.java                                                                                                                                                       100% 3435     3.7MB/s   00:00    
+ChatAnnotation.class                                                                                                                                                      100% 3723     3.3MB/s   00:00    
+SnakeTimer.java                                                                                                                                                           100% 3776     1.7MB/s   00:00    
+Location.class                                                                                                                                                            100% 1322     2.4MB/s   00:00    
+SnakeTimer$1.class                                                                                                                                                        100%  838     1.7MB/s   00:00    
+Location.java                                                                                                                                                             100% 2011     3.9MB/s   00:00    
+SnakeAnnotation.java                                                                                                                                                      100% 4495     7.8MB/s   00:00    
+Direction.class                                                                                                                                                           100% 1110     1.5MB/s   00:00    
+SnakeAnnotation.class                                                                                                                                                     100% 4408     7.6MB/s   00:00    
+Location$1.class                                                                                                                                                          100%  813     1.7MB/s   00:00    
+Snake.class                                                                                                                                                               100% 5122     9.1MB/s   00:00    
+SnakeTimer.class                                                                                                                                                          100% 3577     6.5MB/s   00:00    
+Direction.java                                                                                                                                                            100%  890     1.3MB/s   00:00    
+Snake.java                                                                                                                                                                100% 4623     7.7MB/s   00:00    
+servers.json                                                                                                                                                              100%  679     1.4MB/s   00:00    
+EchoAnnotation.java                                                                                                                                                       100% 2349     4.0MB/s   00:00    
+EchoAsyncAnnotation$1.class                                                                                                                                               100%  238   117.6KB/s   00:00    
+EchoAnnotation.class                                                                                                                                                      100% 1806     1.1MB/s   00:00    
+EchoEndpoint$EchoMessageHandlerBinary.class                                                                                                                               100% 1624     1.6MB/s   00:00    
+EchoAsyncAnnotation.class                                                                                                                                                 100% 2844     1.3MB/s   00:00    
+EchoStreamAnnotation.java                                                                                                                                                 100% 2330     4.1MB/s   00:00    
+EchoEndpoint.java                                                                                                                                                         100% 2907     4.9MB/s   00:00    
+EchoAsyncAnnotation$CompletedFuture.class                                                                                                                                 100% 1714     3.0MB/s   00:00    
+EchoEndpoint$1.class                                                                                                                                                      100%  217   424.1KB/s   00:00    
+EchoStreamAnnotation.class                                                                                                                                                100% 1850     3.6MB/s   00:00    
+EchoEndpoint$EchoMessageHandlerText.class                                                                                                                                 100% 1604     2.5MB/s   00:00    
+EchoEndpoint.class                                                                                                                                                        100% 1266   676.9KB/s   00:00    
+EchoAsyncAnnotation.java                                                                                                                                                  100% 4098     5.9MB/s   00:00    
+ExamplesConfig.class                                                                                                                                                      100% 2382     4.5MB/s   00:00    
+JspCalendar.java                                                                                                                                                          100% 3953     6.6MB/s   00:00    
+JspCalendar.class                                                                                                                                                         100% 3510     5.6MB/s   00:00    
+Entries.java                                                                                                                                                              100% 1921     1.2MB/s   00:00    
+TableBean.java                                                                                                                                                            100% 2920     1.6MB/s   00:00    
+Entry.class                                                                                                                                                               100%  911   742.3KB/s   00:00    
+TableBean.class                                                                                                                                                           100% 2575     1.5MB/s   00:00    
+Entry.java                                                                                                                                                                100% 1424     2.5MB/s   00:00    
+Entries.class                                                                                                                                                             100% 2001     3.6MB/s   00:00    
+LocalStrings_pt.properties                                                                                                                                                100% 2116     4.0MB/s   00:00    
+LocalStrings_es.properties                                                                                                                                                100% 2144     2.9MB/s   00:00    
+ServletToJsp.class                                                                                                                                                        100% 1391   924.7KB/s   00:00    
+CompressionResponseStream.class                                                                                                                                           100% 6652    10.2MB/s   00:00    
+CompressionFilter.java                                                                                                                                                    100% 8465    12.3MB/s   00:00    
+CompressionServletResponseWrapper.class                                                                                                                                   100% 5369     8.7MB/s   00:00    
+CompressionServletResponseWrapper.java                                                                                                                                    100% 8573    11.4MB/s   00:00    
+CompressionFilterTestServlet.java                                                                                                                                         100% 2339     4.0MB/s   00:00    
+CompressionFilterTestServlet.class                                                                                                                                        100% 2019   755.4KB/s   00:00    
+CompressionResponseStream.java                                                                                                                                            100%   13KB   9.4MB/s   00:00    
+CompressionFilter.class                                                                                                                                                   100% 5241     2.8MB/s   00:00    
+LocalStrings_en.properties                                                                                                                                                100% 2027     3.5MB/s   00:00    
+Async2$1.class                                                                                                                                                            100% 2370     4.1MB/s   00:00    
+AsyncStockServlet.java                                                                                                                                                    100% 5172     7.6MB/s   00:00    
+Async2.java                                                                                                                                                               100% 2637     4.2MB/s   00:00    
+Stockticker$TickListener.class                                                                                                                                            100%  307   188.5KB/s   00:00    
+Stockticker.java                                                                                                                                                          100% 6532     9.4MB/s   00:00    
+Stockticker.class                                                                                                                                                         100% 3489     6.4MB/s   00:00    
+Async3.class                                                                                                                                                              100% 1015     2.1MB/s   00:00    
+Stockticker$Stock.class                                                                                                                                                   100% 2596     4.9MB/s   00:00    
+AsyncStockContextListener.java                                                                                                                                            100% 1728     3.5MB/s   00:00    
+AsyncStockContextListener.class                                                                                                                                           100% 1205     2.0MB/s   00:00    
+Async1$1.class                                                                                                                                                            100% 1749     3.0MB/s   00:00    
+Async0.java                                                                                                                                                               100% 2916     3.0MB/s   00:00    
+Async0.class                                                                                                                                                              100% 2883     1.7MB/s   00:00    
+Async1.java                                                                                                                                                               100% 2239     2.9MB/s   00:00    
+Async0$1.class                                                                                                                                                            100% 1815     2.8MB/s   00:00    
+AsyncStockServlet.class                                                                                                                                                   100% 5208     6.4MB/s   00:00    
+Async1.class                                                                                                                                                              100% 1546     3.0MB/s   00:00    
+Async2.class                                                                                                                                                              100% 1546     3.1MB/s   00:00    
+Async3.java                                                                                                                                                               100% 1410     2.8MB/s   00:00    
+NumberGuessBean.java                                                                                                                                                      100% 2458     3.3MB/s   00:00    
+NumberGuessBean.class                                                                                                                                                     100% 2153     1.3MB/s   00:00    
+HelloWorldExample.java                                                                                                                                                    100% 2844     4.9MB/s   00:00    
+ServletToJsp.java                                                                                                                                                         100% 1499     2.9MB/s   00:00    
+SessionExample.class                                                                                                                                                      100% 4682     7.6MB/s   00:00    
+BookBean.java                                                                                                                                                             100% 1288     2.2MB/s   00:00    
+ValuesBean.java                                                                                                                                                           100% 1452     2.2MB/s   00:00    
+Functions.class                                                                                                                                                           100% 1148     2.0MB/s   00:00    
+Functions.java                                                                                                                                                            100% 1517   770.1KB/s   00:00    
+BookBean.class                                                                                                                                                            100%  736   918.3KB/s   00:00    
+FooBean.java                                                                                                                                                              100% 1053     1.8MB/s   00:00    
+TileSimpleTag.class                                                                                                                                                       100% 1263     2.3MB/s   00:00    
+HelloWorldSimpleTag.java                                                                                                                                                  100% 1199     2.4MB/s   00:00    
+RepeatSimpleTag.java                                                                                                                                                      100% 1423     2.9MB/s   00:00    
+HelloWorldSimpleTag.class                                                                                                                                                 100%  764     1.3MB/s   00:00    
+ShuffleSimpleTag.java                                                                                                                                                     100% 2837     1.8MB/s   00:00    
+EchoAttributesTag.java                                                                                                                                                    100% 1885     2.4MB/s   00:00    
+FindBookSimpleTag.java                                                                                                                                                    100% 1605     2.6MB/s   00:00    
+RepeatSimpleTag.class                                                                                                                                                     100% 1102     1.9MB/s   00:00    
+FindBookSimpleTag.class                                                                                                                                                   100% 1133     1.9MB/s   00:00    
+ShuffleSimpleTag.class                                                                                                                                                    100% 1524     2.8MB/s   00:00    
+TileSimpleTag.java                                                                                                                                                        100% 1569     2.3MB/s   00:00    
+EchoAttributesTag.class                                                                                                                                                   100% 1898     2.6MB/s   00:00    
+ValuesBean.class                                                                                                                                                          100%  983     1.2MB/s   00:00    
+FooBean.class                                                                                                                                                             100%  554   472.2KB/s   00:00    
+CookieExample.java                                                                                                                                                        100% 5160     4.1MB/s   00:00    
+SessionListener.class                                                                                                                                                     100% 2863     4.6MB/s   00:00    
+ContextListener.java                                                                                                                                                      100% 3786     6.2MB/s   00:00    
+SessionListener.java                                                                                                                                                      100% 4660     6.1MB/s   00:00    
+ContextListener.class                                                                                                                                                     100% 2225     1.4MB/s   00:00    
+HTMLFilter.class                                                                                                                                                          100% 1081     2.0MB/s   00:00    
+CookieFilter.java                                                                                                                                                         100% 3099     6.0MB/s   00:00    
+CookieFilter.class                                                                                                                                                        100% 1942     3.9MB/s   00:00    
+HTMLFilter.java                                                                                                                                                           100% 2138     4.2MB/s   00:00    
+SessionExample.java                                                                                                                                                       100% 5455     7.1MB/s   00:00    
+ColorGameBean.class                                                                                                                                                       100% 2171     4.0MB/s   00:00    
+ColorGameBean.java                                                                                                                                                        100% 2918     5.6MB/s   00:00    
+CookieExample.class                                                                                                                                                       100% 4472     7.0MB/s   00:00    
+RequestHeaderExample.java                                                                                                                                                 100% 3900     6.1MB/s   00:00    
+carts.html                                                                                                                                                                100% 1375     1.6MB/s   00:00    
+DummyCart.html                                                                                                                                                            100% 1396     1.0MB/s   00:00    
+carts.jsp.html                                                                                                                                                            100% 1415     1.6MB/s   00:00    
+carts.jsp                                                                                                                                                                 100% 1246     1.7MB/s   00:00    
+crt.html                                                                                                                                                                  100% 1388     2.1MB/s   00:00    
+fwd.html                                                                                                                                                                  100% 1293     2.1MB/s   00:00    
+two.html                                                                                                                                                                  100%  871     1.7MB/s   00:00    
+forward.jsp.html                                                                                                                                                          100% 1212     2.3MB/s   00:00    
+forward.jsp                                                                                                                                                               100% 1070     2.1MB/s   00:00    
+one.jsp                                                                                                                                                                   100%  872     1.8MB/s   00:00    
+one.jsp.html                                                                                                                                                              100% 1007     1.8MB/s   00:00    
+index.jsp.html                                                                                                                                                            100% 2615     5.3MB/s   00:00    
+login.jsp.html                                                                                                                                                            100% 1619     3.3MB/s   00:00    
+error.jsp.html                                                                                                                                                            100% 1144     2.2MB/s   00:00    
+error.jsp                                                                                                                                                                 100%  993     2.0MB/s   00:00    
+login.jsp                                                                                                                                                                 100% 1399     2.3MB/s   00:00    
+index.jsp                                                                                                                                                                 100% 2338     3.7MB/s   00:00    
+errorpge.jsp                                                                                                                                                              100%  965   758.6KB/s   00:00    
+err.jsp.html                                                                                                                                                              100% 1569     1.7MB/s   00:00    
+er.html                                                                                                                                                                   100% 1287   909.9KB/s   00:00    
+errorpge.jsp.html                                                                                                                                                         100% 1104   791.9KB/s   00:00    
+error.html                                                                                                                                                                100% 1283     2.0MB/s   00:00    
+err.jsp                                                                                                                                                                   100% 1412     2.9MB/s   00:00    
+cresult.html                                                                                                                                                              100% 1398     3.0MB/s   00:00    
+checkresult.jsp.html                                                                                                                                                      100% 1859     3.8MB/s   00:00    
+checkresult.jsp                                                                                                                                                           100% 1657     2.5MB/s   00:00    
+check.html                                                                                                                                                                100% 1245     2.6MB/s   00:00    
+CheckTest.html                                                                                                                                                            100% 1396     2.9MB/s   00:00    
+plugin.jsp                                                                                                                                                                100% 1244     2.5MB/s   00:00    
+plugin.html                                                                                                                                                               100% 1290     2.7MB/s   00:00    
+plugin.jsp.html                                                                                                                                                           100% 1413     2.8MB/s   00:00    
+Clock2.class                                                                                                                                                              100% 5869     8.1MB/s   00:00    
+Clock2.java                                                                                                                                                               100% 7785    10.4MB/s   00:00    
+foo.html                                                                                                                                                                  100%  817   709.5KB/s   00:00    
+include.jsp.html                                                                                                                                                          100% 1279     1.4MB/s   00:00    
+inc.html                                                                                                                                                                  100% 1293   794.0KB/s   00:00    
+include.jsp                                                                                                                                                               100% 1131   634.5KB/s   00:00    
+foo.jsp                                                                                                                                                                   100%  822     1.6MB/s   00:00    
+foo.jsp.html                                                                                                                                                              100%  943     1.9MB/s   00:00    
+snoop.jsp.html                                                                                                                                                            100% 2262     4.3MB/s   00:00    
+snoop.jsp                                                                                                                                                                 100% 2024     3.6MB/s   00:00    
+snoop.html                                                                                                                                                                100% 1300     2.4MB/s   00:00    
+date.html                                                                                                                                                                 100% 1285     2.3MB/s   00:00    
+date.jsp.html                                                                                                                                                             100% 1991     4.2MB/s   00:00    
+date.jsp                                                                                                                                                                  100% 1777     3.7MB/s   00:00    
+foreach.html                                                                                                                                                              100% 1229     2.6MB/s   00:00    
+choose.jsp                                                                                                                                                                100% 1605     2.6MB/s   00:00    
+notes.html                                                                                                                                                                100% 1659     2.4MB/s   00:00    
+howto.html                                                                                                                                                                100% 1621     2.5MB/s   00:00    
+choose.html                                                                                                                                                               100% 1226     1.2MB/s   00:00    
+foreach.jsp.html                                                                                                                                                          100% 1849     1.0MB/s   00:00    
+if.html                                                                                                                                                                   100% 1214     1.1MB/s   00:00    
+foreach.jsp                                                                                                                                                               100% 1631   712.8KB/s   00:00    
+if.jsp                                                                                                                                                                    100% 1559     2.9MB/s   00:00    
+if.jsp.html                                                                                                                                                               100% 1786     3.5MB/s   00:00    
+choose.jsp.html                                                                                                                                                           100% 1841     3.4MB/s   00:00    
+xml.jsp                                                                                                                                                                   100% 2058     4.2MB/s   00:00    
+xml.html                                                                                                                                                                  100% 1289     2.3MB/s   00:00    
+xml.jsp.html                                                                                                                                                              100% 2294     3.3MB/s   00:00    
+index.html                                                                                                                                                                100%   14KB   8.9MB/s   00:00    
+execute.gif                                                                                                                                                               100% 1242     2.4MB/s   00:00    
+read.gif                                                                                                                                                                  100% 1125     2.2MB/s   00:00    
+code.gif                                                                                                                                                                  100%  292   520.8KB/s   00:00    
+return.gif                                                                                                                                                                100% 1231     2.2MB/s   00:00    
+Entries.java.html                                                                                                                                                         100% 2048     1.7MB/s   00:00    
+cal2.jsp                                                                                                                                                                  100% 1524   995.2KB/s   00:00    
+JspCalendar.java.html                                                                                                                                                     100% 4068     4.1MB/s   00:00    
+cal2.jsp.html                                                                                                                                                             100% 1741   938.6KB/s   00:00    
+login.html                                                                                                                                                                100% 1510     2.3MB/s   00:00    
+cal1.jsp                                                                                                                                                                  100% 2348     4.1MB/s   00:00    
+calendar.html                                                                                                                                                             100% 1654     3.2MB/s   00:00    
+cal1.jsp.html                                                                                                                                                             100% 2670     4.4MB/s   00:00    
+Entry.java.html                                                                                                                                                           100% 1539     1.1MB/s   00:00    
+TableBean.java.html                                                                                                                                                       100% 3041     4.8MB/s   00:00    
+index.jsp.html                                                                                                                                                            100% 2589     5.2MB/s   00:00    
+async3.jsp                                                                                                                                                                100% 1110     2.3MB/s   00:00    
+async1.jsp                                                                                                                                                                100% 1227     2.3MB/s   00:00    
+index.jsp                                                                                                                                                                 100% 2416     3.0MB/s   00:00    
+async1.jsp.html                                                                                                                                                           100% 1358     2.5MB/s   00:00    
+async3.jsp.html                                                                                                                                                           100% 1241     1.3MB/s   00:00    
+numguess.jsp.html                                                                                                                                                         100% 2174     1.7MB/s   00:00    
+numguess.html                                                                                                                                                             100% 1388     1.0MB/s   00:00    
+numguess.jsp                                                                                                                                                              100% 1938     3.5MB/s   00:00    
+foo.html                                                                                                                                                                  100% 1292     2.5MB/s   00:00    
+foo.jsp                                                                                                                                                                   100% 1148     2.1MB/s   00:00    
+foo.jsp.html                                                                                                                                                              100% 1314     2.6MB/s   00:00    
+jspattribute.jsp                                                                                                                                                          100% 1855     1.0MB/s   00:00    
+TileSimpleTag.java.html                                                                                                                                                   100% 1702     3.1MB/s   00:00    
+jspattribute.html                                                                                                                                                         100% 1545     3.0MB/s   00:00    
+HelloWorldSimpleTag.java.html                                                                                                                                             100% 1314     2.7MB/s   00:00    
+shuffle.jsp.html                                                                                                                                                          100% 3809     7.3MB/s   00:00    
+jspattribute.jsp.html                                                                                                                                                     100% 2083     4.1MB/s   00:00    
+ShuffleSimpleTag.java.html                                                                                                                                                100% 2952     5.0MB/s   00:00    
+FooBean.java.html                                                                                                                                                         100% 1168     1.7MB/s   00:00    
+shuffle.jsp                                                                                                                                                               100% 3473     5.5MB/s   00:00    
+shuffle.html                                                                                                                                                              100% 1536     1.2MB/s   00:00    
+functions.jsp.html                                                                                                                                                        100% 2762     3.4MB/s   00:00    
+basic-arithmetic.html                                                                                                                                                     100% 1328   834.2KB/s   00:00    
+composite.html                                                                                                                                                            100% 1420     2.4MB/s   00:00    
+composite.jsp.html                                                                                                                                                        100% 4574     7.6MB/s   00:00    
+ValuesTag.java.html                                                                                                                                                       100% 2686     5.0MB/s   00:00    
+implicit-objects.jsp.html                                                                                                                                                 100% 3916     7.5MB/s   00:00    
+composite.jsp                                                                                                                                                             100% 4030     6.4MB/s   00:00    
+implicit-objects.jsp                                                                                                                                                      100% 3502     2.1MB/s   00:00    
+basic-comparisons.jsp.html                                                                                                                                                100% 3794     6.4MB/s   00:00    
+basic-comparisons.jsp                                                                                                                                                     100% 3161     5.8MB/s   00:00    
+basic-arithmetic.jsp                                                                                                                                                      100% 2386     4.3MB/s   00:00    
+basic-comparisons.html                                                                                                                                                    100% 1331     2.7MB/s   00:00    
+implicit-objects.html                                                                                                                                                     100% 1337     2.1MB/s   00:00    
+Functions.java.html                                                                                                                                                       100% 1641     3.0MB/s   00:00    
+functions.jsp                                                                                                                                                             100% 2439     3.9MB/s   00:00    
+basic-arithmetic.jsp.html                                                                                                                                                 100% 2804     4.8MB/s   00:00    
+functions.html                                                                                                                                                            100% 1422     1.4MB/s   00:00    
+ValuesBean.java.html                                                                                                                                                      100% 1567     1.6MB/s   00:00    
+textRotate.jspx.html                                                                                                                                                      100% 2673     4.1MB/s   00:00    
+textRotate.html                                                                                                                                                           100% 1221     2.2MB/s   00:00    
+textRotate.jspx                                                                                                                                                           100% 2456     4.7MB/s   00:00    
+basic.jspx.html                                                                                                                                                           100% 2390     4.0MB/s   00:00    
+textRotate.jpg                                                                                                                                                            100%   26KB  12.3MB/s   00:00    
+basic.html                                                                                                                                                                100% 1191     1.7MB/s   00:00    
+svgexample.html                                                                                                                                                           100% 2033     4.0MB/s   00:00    
+basic.jspx                                                                                                                                                                100% 2210     4.0MB/s   00:00    
+book.jsp.html                                                                                                                                                             100% 2152     4.3MB/s   00:00    
+repeat.jsp.html                                                                                                                                                           100% 1905     3.4MB/s   00:00    
+book.html                                                                                                                                                                 100% 1641     3.1MB/s   00:00    
+HelloWorldSimpleTag.java.html                                                                                                                                             100% 1314     2.7MB/s   00:00    
+book.jsp                                                                                                                                                                  100% 1843     3.1MB/s   00:00    
+BookBean.java.html                                                                                                                                                        100% 1403     2.4MB/s   00:00    
+repeat.jsp                                                                                                                                                                100% 1712     2.9MB/s   00:00    
+FindBookSimpleTag.java.html                                                                                                                                               100% 1720     1.6MB/s   00:00    
+RepeatSimpleTag.java.html                                                                                                                                                 100% 1541     1.5MB/s   00:00    
+hello.jsp.html                                                                                                                                                            100% 1416     1.4MB/s   00:00    
+Functions.java.html                                                                                                                                                       100% 1641     3.2MB/s   00:00    
+hello.jsp                                                                                                                                                                 100% 1238     2.5MB/s   00:00    
+hello.html                                                                                                                                                                100% 1450   784.9KB/s   00:00    
+repeat.html                                                                                                                                                               100% 1438     2.8MB/s   00:00    
+prelude.jspf.html                                                                                                                                                         100% 1005     1.9MB/s   00:00    
+EchoAttributesTag.java.html                                                                                                                                               100% 2021     4.2MB/s   00:00    
+coda.jspf.html                                                                                                                                                            100% 1002     2.1MB/s   00:00    
+dynamicattrs.jsp                                                                                                                                                          100% 1627     2.8MB/s   00:00    
+dynamicattrs.html                                                                                                                                                         100% 1436     2.8MB/s   00:00    
+config.jsp                                                                                                                                                                100% 1597     3.3MB/s   00:00    
+prelude.jspf                                                                                                                                                              100%  867     1.8MB/s   00:00    
+config.jsp.html                                                                                                                                                           100% 1825     3.5MB/s   00:00    
+dynamicattrs.jsp.html                                                                                                                                                     100% 1835     3.1MB/s   00:00    
+config.html                                                                                                                                                               100% 1495   898.9KB/s   00:00    
+coda.jspf                                                                                                                                                                 100%  864   735.7KB/s   00:00    
+panel.tag.html                                                                                                                                                            100% 1211     1.5MB/s   00:00    
+panel.html                                                                                                                                                                100% 1389     1.9MB/s   00:00    
+panel.jsp.html                                                                                                                                                            100% 2398     4.0MB/s   00:00    
+products.jsp.html                                                                                                                                                         100% 2307     1.4MB/s   00:00    
+displayProducts.tag.html                                                                                                                                                  100% 2281     3.7MB/s   00:00    
+panel.jsp                                                                                                                                                                 100% 2160     4.5MB/s   00:00    
+products.html                                                                                                                                                             100% 1418     3.1MB/s   00:00    
+helloWorld.tag.html                                                                                                                                                       100%  919     2.0MB/s   00:00    
+hello.jsp.html                                                                                                                                                            100% 1611     3.2MB/s   00:00    
+hello.jsp                                                                                                                                                                 100% 1427     2.6MB/s   00:00    
+hello.html                                                                                                                                                                100% 1399     2.7MB/s   00:00    
+products.jsp                                                                                                                                                              100% 2048     4.1MB/s   00:00    
+colrs.jsp                                                                                                                                                                 100% 1685     3.4MB/s   00:00    
+colors.html                                                                                                                                                               100% 1528     3.1MB/s   00:00    
+colrs.jsp.html                                                                                                                                                            100% 1908     3.3MB/s   00:00    
+ColorGameBean.html                                                                                                                                                        100% 2434     4.2MB/s   00:00    
+clr.html                                                                                                                                                                  100% 1398     1.3MB/s   00:00    
+jsptoservlet.jsp.html                                                                                                                                                     100% 1028   857.9KB/s   00:00    
+jsptoservlet.jsp                                                                                                                                                          100%  894     1.1MB/s   00:00    
+ServletToJsp.java.html                                                                                                                                                    100% 1614     2.5MB/s   00:00    
+jts.html                                                                                                                                                                  100% 1341   883.7KB/s   00:00    
+hello.jsp.html                                                                                                                                                            100% 1073     2.0MB/s   00:00    
+hello.jsp                                                                                                                                                                 100%  936     1.7MB/s   00:00    
+cookies.html                                                                                                                                                              100% 2680     4.6MB/s   00:00    
+reqparams.html                                                                                                                                                            100% 4572     7.4MB/s   00:00    
+bytecounter.html                                                                                                                                                          100% 1425     2.6MB/s   00:00    
+sessions.html                                                                                                                                                             100% 3197     6.0MB/s   00:00    
+helloworld.html                                                                                                                                                           100% 2562     4.7MB/s   00:00    
+reqinfo.html                                                                                                                                                              100% 3606     6.9MB/s   00:00    
+index.html                                                                                                                                                                100% 6151    10.2MB/s   00:00    
+execute.gif                                                                                                                                                               100% 1242     2.3MB/s   00:00    
+code.gif                                                                                                                                                                  100%  292   576.6KB/s   00:00    
+return.gif                                                                                                                                                                100% 1231     2.1MB/s   00:00    
+reqheaders.html                                                                                                                                                           100% 2255     2.0MB/s   00:00    
+flipkart.war                                                                                                                                                              100% 2108     2.5MB/s   00:00    
+update.gif                                                                                                                                                                100%  627   349.2KB/s   00:00    
+tomcat.gif                                                                                                                                                                100% 2066     3.6MB/s   00:00    
+asf-logo.svg                                                                                                                                                              100%   20KB  22.5MB/s   00:00    
+design.gif                                                                                                                                                                100%  608     1.2MB/s   00:00    
+code.gif                                                                                                                                                                  100%  394   816.8KB/s   00:00    
+fix.gif                                                                                                                                                                   100%  345   720.3KB/s   00:00    
+docs.gif                                                                                                                                                                  100%  261   525.3KB/s   00:00    
+void.gif                                                                                                                                                                  100%   43    93.3KB/s   00:00    
+add.gif                                                                                                                                                                   100% 1037     2.1MB/s   00:00    
+web.xml                                                                                                                                                                   100% 4835     7.8MB/s   00:00    
+401.jsp                                                                                                                                                                   100% 2893     6.0MB/s   00:00    
+404.jsp                                                                                                                                                                   100% 2523     4.5MB/s   00:00    
+403.jsp                                                                                                                                                                   100% 3887     6.7MB/s   00:00    
+manager.xml                                                                                                                                                               100% 1021     1.4MB/s   00:00    
+index.jsp                                                                                                                                                                 100%  913   471.8KB/s   00:00    
+context.xml                                                                                                                                                               100% 1222   552.0KB/s   00:00    
+update.gif                                                                                                                                                                100%  627     1.2MB/s   00:00    
+tomcat.gif                                                                                                                                                                100% 2066     4.0MB/s   00:00    
+asf-logo.svg                                                                                                                                                              100%   20KB  21.7MB/s   00:00    
+design.gif                                                                                                                                                                100%  608     1.2MB/s   00:00    
+code.gif                                                                                                                                                                  100%  394   853.9KB/s   00:00    
+fix.gif                                                                                                                                                                   100%  345   761.3KB/s   00:00    
+docs.gif                                                                                                                                                                  100%  261   575.9KB/s   00:00    
+void.gif                                                                                                                                                                  100%   43    93.5KB/s   00:00    
+add.gif                                                                                                                                                                   100% 1037     2.2MB/s   00:00    
+status.xsd                                                                                                                                                                100% 4374     7.5MB/s   00:00    
+web.xml                                                                                                                                                                   100% 6940    10.5MB/s   00:00    
+connectorTrustedCerts.jsp                                                                                                                                                 100% 3390     4.6MB/s   00:00    
+sessionDetail.jsp                                                                                                                                                         100% 8154    10.9MB/s   00:00    
+401.jsp                                                                                                                                                                   100% 3322     1.4MB/s   00:00    
+sessionsList.jsp                                                                                                                                                          100%   11KB   3.1MB/s   00:00    
+connectorCiphers.jsp                                                                                                                                                      100% 3366     1.5MB/s   00:00    
+connectorCerts.jsp                                                                                                                                                        100% 3403     6.2MB/s   00:00    
+404.jsp                                                                                                                                                                   100% 2661     5.0MB/s   00:00    
+403.jsp                                                                                                                                                                   100% 4290     6.7MB/s   00:00    
+xform.xsl                                                                                                                                                                 100% 4615     2.2MB/s   00:00    
+index.jsp                                                                                                                                                                 100%  913     1.4MB/s   00:00    
+context.xml                                                                                                                                                               100% 1223     2.4MB/s   00:00    
+bootstrap.min.js                                                                                                                                                          100%   36KB  19.4MB/s   00:00    
+jquery.min.js                                                                                                                                                             100%   85KB  19.2MB/s   00:00    
+javax.servlet-api-3.1.0.jar                                                                                                                                               100%   94KB  33.1MB/s   00:00    
+web.xml                                                                                                                                                                   100%   89   177.2KB/s   00:00    
+App.class                                                                                                                                                                 100%  793     1.6MB/s   00:00    
+index.jsp                                                                                                                                                                 100% 4625     6.8MB/s   00:00    
+bootstrap.min.css                                                                                                                                                         100%  118KB  32.0MB/s   00:00    
+main.css                                                                                                                                                                  100%  516   996.6KB/s   00:00    
+sticky-footer-navbar.css                                                                                                                                                  100%  434   873.7KB/s   00:00    
+MANIFEST.MF                                                                                                                                                               100%  133   289.2KB/s   00:00    
+pom.xml                                                                                                                                                                   100%  639     1.1MB/s   00:00    
+pom.properties                                                                                                                                                            100%  115   212.1KB/s   00:00    
+war-tracker                                                                                                                                                               100%    0     0.0KB/s   00:00    
+RELEASE-NOTES.txt                                                                                                                                                         100% 7142     5.6MB/s   00:00    
+html-host-manager-howto.html                                                                                                                                              100%   14KB   9.6MB/s   00:00    
+mbeans-descriptors.dtd                                                                                                                                                    100%   10KB  13.1MB/s   00:00    
+jndi-datasource-examples-howto.html                                                                                                                                       100%   35KB  31.8MB/s   00:00    
+realm-howto.html                                                                                                                                                          100%   62KB  44.9MB/s   00:00    
+BUILDING.txt                                                                                                                                                              100%   19KB  17.3MB/s   00:00    
+introduction.html                                                                                                                                                         100%   17KB  12.9MB/s   00:00    
+logging.html                                                                                                                                                              100%   25KB  26.4MB/s   00:00    
+default-servlet.html                                                                                                                                                      100%   18KB  21.7MB/s   00:00    
+cluster-howto.html                                                                                                                                                        100%   43KB  39.8MB/s   00:00    
+extras.html                                                                                                                                                               100%   10KB  14.7MB/s   00:00    
+monitoring.html                                                                                                                                                           100%   38KB  34.2MB/s   00:00    
+fs-admin-opers.html                                                                                                                                                       100%   16KB  18.2MB/s   00:00    
+mbean-names.html                                                                                                                                                          100%   32KB  18.9MB/s   00:00    
+fs-admin-objects.html                                                                                                                                                     100%   24KB   9.5MB/s   00:00    
+fs-jndi-realm.html                                                                                                                                                        100%   21KB  10.9MB/s   00:00    
+index.html                                                                                                                                                                100% 6203     9.9MB/s   00:00    
+fs-admin-apps.html                                                                                                                                                        100%   17KB  21.4MB/s   00:00    
+fs-default.html                                                                                                                                                           100%   15KB  16.9MB/s   00:00    
+fs-jdbc-realm.html                                                                                                                                                        100%   15KB   6.5MB/s   00:00    
+fs-memory-realm.html                                                                                                                                                      100%   14KB  14.4MB/s   00:00    
+deployer-howto.html                                                                                                                                                       100%   22KB  25.1MB/s   00:00    
+changelog.html                                                                                                                                                            100%  333KB  83.7MB/s   00:00    
+manager-howto.html                                                                                                                                                        100%   74KB  46.5MB/s   00:00    
+ssl-howto.html                                                                                                                                                            100%   40KB  31.2MB/s   00:00    
+index.html                                                                                                                                                                100% 1156     1.0MB/s   00:00    
+html-manager-howto.html                                                                                                                                                   100%   29KB  14.5MB/s   00:00    
+RUNNING.txt                                                                                                                                                               100%   16KB   8.6MB/s   00:00    
+web-socket-howto.html                                                                                                                                                     100%   12KB  15.5MB/s   00:00    
+virtual-hosting-howto.html                                                                                                                                                100%   12KB  15.3MB/s   00:00    
+building.html                                                                                                                                                             100%   16KB   8.8MB/s   00:00    
+jasper-howto.html                                                                                                                                                         100%   23KB  23.1MB/s   00:00    
+host-manager-howto.html                                                                                                                                                   100%   16KB  17.1MB/s   00:00    
+class-loader-howto.html                                                                                                                                                   100%   19KB  22.5MB/s   00:00    
+aio.html                                                                                                                                                                  100% 9183    12.9MB/s   00:00    
+jdbc-pool.html                                                                                                                                                            100%   65KB  48.9MB/s   00:00    
+index.html                                                                                                                                                                100%   17KB  19.9MB/s   00:00    
+rewrite.html                                                                                                                                                              100%   34KB  24.8MB/s   00:00    
+tomcat.svg                                                                                                                                                                100%   66KB  40.9MB/s   00:00    
+update.gif                                                                                                                                                                100%  627   757.1KB/s   00:00    
+tomcat.gif                                                                                                                                                                100% 2066     1.7MB/s   00:00    
+docs-stylesheet.css                                                                                                                                                       100% 5780     4.1MB/s   00:00    
+asf-logo.svg                                                                                                                                                              100%   20KB  18.4MB/s   00:00    
+design.gif                                                                                                                                                                100%  608   317.8KB/s   00:00    
+code.gif                                                                                                                                                                  100%  394   671.7KB/s   00:00    
+tomcat.png                                                                                                                                                                100% 5103     8.7MB/s   00:00    
+printer.gif                                                                                                                                                               100%  438   862.5KB/s   00:00    
+fix.gif                                                                                                                                                                   100%  345   711.2KB/s   00:00    
+docs.gif                                                                                                                                                                  100%  261   528.7KB/s   00:00    
+cors-flowchart.png                                                                                                                                                        100%   85KB  41.9MB/s   00:00    
+void.gif                                                                                                                                                                  100%   43    79.7KB/s   00:00    
+add.gif                                                                                                                                                                   100% 1037     2.2MB/s   00:00    
+OpenSans700.woff                                                                                                                                                          100%   22KB  26.2MB/s   00:00    
+OpenSans600italic.woff                                                                                                                                                    100%   21KB  20.8MB/s   00:00    
+OpenSans700italic.woff                                                                                                                                                    100%   21KB  17.9MB/s   00:00    
+OpenSans600.woff                                                                                                                                                          100%   22KB   9.7MB/s   00:00    
+OpenSans400.woff                                                                                                                                                          100%   21KB  15.4MB/s   00:00    
+fonts.css                                                                                                                                                                 100% 1943     3.0MB/s   00:00    
+OpenSans400italic.woff                                                                                                                                                    100%   21KB   8.7MB/s   00:00    
+index.html                                                                                                                                                                100% 1150     2.3MB/s   00:00    
+web.xml                                                                                                                                                                   100% 1234     2.2MB/s   00:00    
+maven-jars.html                                                                                                                                                           100% 8238     9.5MB/s   00:00    
+apr.html                                                                                                                                                                  100%   13KB  15.4MB/s   00:00    
+index.html                                                                                                                                                                100% 1152     2.1MB/s   00:00    
+security-manager-howto.html                                                                                                                                               100%   30KB  28.4MB/s   00:00    
+connectors.html                                                                                                                                                           100% 8791    12.5MB/s   00:00    
+mbeans-descriptors-howto.html                                                                                                                                             100% 8516    11.5MB/s   00:00    
+ssi-howto.html                                                                                                                                                            100%   17KB  19.2MB/s   00:00    
+interceptors.html                                                                                                                                                         100% 4570     4.2MB/s   00:00    
+introduction.html                                                                                                                                                         100%   19KB  14.9MB/s   00:00    
+transport.html                                                                                                                                                            100% 4555     5.3MB/s   00:00    
+membership.html                                                                                                                                                           100% 4560     2.4MB/s   00:00    
+status.html                                                                                                                                                               100% 4540     7.3MB/s   00:00    
+faq.html                                                                                                                                                                  100% 4617     7.9MB/s   00:00    
+setup.html                                                                                                                                                                100% 4585     7.9MB/s   00:00    
+developers.html                                                                                                                                                           100% 4560     7.7MB/s   00:00    
+jndi-resources-howto.html                                                                                                                                                 100%   53KB  43.3MB/s   00:00    
+windows-auth-howto.html                                                                                                                                                   100%   22KB  24.1MB/s   00:00    
+index.html                                                                                                                                                                100% 1146     2.0MB/s   00:00    
+security-howto.html                                                                                                                                                       100%   35KB  33.7MB/s   00:00    
+balancer-howto.html                                                                                                                                                       100% 7711    11.1MB/s   00:00    
+filter.html                                                                                                                                                               100%   92KB  35.1MB/s   00:00    
+jaspic.html                                                                                                                                                               100%   13KB   6.0MB/s   00:00    
+credentialhandler.html                                                                                                                                                    100%   14KB   9.8MB/s   00:00    
+globalresources.html                                                                                                                                                      100%   17KB   7.6MB/s   00:00    
+host.html                                                                                                                                                                 100%   38KB  36.1MB/s   00:00    
+http2.html                                                                                                                                                                100%   17KB  20.6MB/s   00:00    
+loader.html                                                                                                                                                               100%   12KB  16.4MB/s   00:00    
+context.html                                                                                                                                                              100%   74KB  51.7MB/s   00:00    
+cluster-sender.html                                                                                                                                                       100%   15KB  19.6MB/s   00:00    
+service.html                                                                                                                                                              100% 8874    14.1MB/s   00:00    
+realm.html                                                                                                                                                                100%   64KB  49.9MB/s   00:00    
+cluster-interceptor.html                                                                                                                                                  100%   25KB  26.7MB/s   00:00    
+cluster-receiver.html                                                                                                                                                     100%   14KB  18.2MB/s   00:00    
+cluster-membership.html                                                                                                                                                   100%   13KB  15.2MB/s   00:00    
+cluster-deployer.html                                                                                                                                                     100% 9747    11.4MB/s   00:00    
+index.html                                                                                                                                                                100% 9151    12.7MB/s   00:00    
+cluster-manager.html                                                                                                                                                      100%   22KB  12.6MB/s   00:00    
+valve.html                                                                                                                                                                100%  106KB  22.8MB/s   00:00    
+systemprops.html                                                                                                                                                          100%   40KB  31.5MB/s   00:00    
+cookie-processor.html                                                                                                                                                     100%   12KB  16.8MB/s   00:00    
+listeners.html                                                                                                                                                            100%   39KB  37.1MB/s   00:00    
+cluster.html                                                                                                                                                              100%   14KB  17.3MB/s   00:00    
+ajp.html                                                                                                                                                                  100%   47KB  35.9MB/s   00:00    
+resources.html                                                                                                                                                            100%   20KB   8.6MB/s   00:00    
+jar-scan-filter.html                                                                                                                                                      100%   13KB  17.0MB/s   00:00    
+cluster-valve.html                                                                                                                                                        100%   15KB  19.2MB/s   00:00    
+engine.html                                                                                                                                                               100%   16KB  18.9MB/s   00:00    
+cluster-channel.html                                                                                                                                                      100%   11KB  13.6MB/s   00:00    
+manager.html                                                                                                                                                              100%   31KB  13.9MB/s   00:00    
+sessionidgenerator.html                                                                                                                                                   100%   10KB   7.0MB/s   00:00    
+executor.html                                                                                                                                                             100%   11KB   4.2MB/s   00:00    
+jar-scanner.html                                                                                                                                                          100%   11KB  15.2MB/s   00:00    
+http.html                                                                                                                                                                 100%  101KB  56.3MB/s   00:00    
+automatic-deployment.html                                                                                                                                                 100%   23KB  26.0MB/s   00:00    
+cluster-listener.html                                                                                                                                                     100% 7300    10.4MB/s   00:00    
+server.html                                                                                                                                                               100% 9668     3.8MB/s   00:00    
+setup.html                                                                                                                                                                100%   14KB  17.8MB/s   00:00    
+sample.war                                                                                                                                                                100% 4606     7.2MB/s   00:00    
+index.html                                                                                                                                                                100% 1433     2.0MB/s   00:00    
+tomcat.gif                                                                                                                                                                100% 2066     2.4MB/s   00:00    
+web.xml                                                                                                                                                                   100% 1612     1.1MB/s   00:00    
+hello.jsp                                                                                                                                                                 100% 1242   749.9KB/s   00:00    
+index.html                                                                                                                                                                100% 2212     3.6MB/s   00:00    
+README.txt                                                                                                                                                                100%  840     1.8MB/s   00:00    
+Hello.java                                                                                                                                                                100% 2987     2.5MB/s   00:00    
+build.xml                                                                                                                                                                 100%   16KB  17.4MB/s   00:00    
+introduction.html                                                                                                                                                         100% 7224    11.0MB/s   00:00    
+deployment.html                                                                                                                                                           100%   16KB  20.3MB/s   00:00    
+index.html                                                                                                                                                                100% 6209     8.9MB/s   00:00    
+source.html                                                                                                                                                               100%   19KB  17.0MB/s   00:00    
+processes.html                                                                                                                                                            100%   17KB  10.7MB/s   00:00    
+build.xml.txt                                                                                                                                                             100%   16KB   7.4MB/s   00:00    
+web.xml.txt                                                                                                                                                               100% 6250     6.6MB/s   00:00    
+installation.html                                                                                                                                                         100% 7157    10.0MB/s   00:00    
+cgi-howto.html                                                                                                                                                            100%   12KB  15.9MB/s   00:00    
+windows-service-howto.html                                                                                                                                                100%   23KB  26.3MB/s   00:00    
+comments.html                                                                                                                                                             100%   10KB  14.2MB/s   00:00    
+index.html                                                                                                                                                                100% 1145     1.6MB/s   00:00    
+developers.html                                                                                                                                                           100% 8716     4.1MB/s   00:00    
+startup.html                                                                                                                                                              100% 5113     8.4MB/s   00:00    
+authentication-process.png                                                                                                                                                100%   42KB  35.0MB/s   00:00    
+request-process.png                                                                                                                                                       100%  107KB  53.9MB/s   00:00    
+overview.html                                                                                                                                                             100% 8263    10.6MB/s   00:00    
+serverStartup.txt                                                                                                                                                         100% 8532     7.4MB/s   00:00    
+serverStartup.pdf                                                                                                                                                         100%   45KB  19.8MB/s   00:00    
+index.html                                                                                                                                                                100% 5224     3.3MB/s   00:00    
+requestProcess.html                                                                                                                                                       100% 5165     8.0MB/s   00:00    
+proxy-howto.html                                                                                                                                                          100%   13KB  17.4MB/s   00:00    
+web.xml                                                                                                                                                                   100%  215   449.6KB/s   00:00    
+index.jsp                                                                                                                                                                 100%   52    87.0KB/s   00:00    
+MANIFEST.MF                                                                                                                                                               100%  133   130.8KB/s   00:00    
+pom.xml                                                                                                                                                                   100%  711     1.4MB/s   00:00    
+pom.properties                                                                                                                                                            100%  112   233.6KB/s   00:00    
+war-tracker                                                                                                                                                               100%    0     0.0KB/s   00:00    
+web.xml                                                                                                                                                                   100%  215   413.4KB/s   00:00    
+index.jsp                                                                                                                                                                 100%   52    46.9KB/s   00:00    
+MANIFEST.MF                                                                                                                                                               100%  133   169.9KB/s   00:00    
+pom.xml                                                                                                                                                                   100%  711     1.3MB/s   00:00    
+pom.properties                                                                                                                                                            100%  112   232.0KB/s   00:00    
+war-tracker                                                                                                                                                               100%    0     0.0KB/s   00:00    
+gamutkart.war                                                                                                                                                             100%  147KB  33.3MB/s   00:00    
+alipkart.war                                                                                                                                                              100% 2110     3.6MB/s   00:00    
+[pranali@oc3342480422 Distros]$ scp -rp apache-tomcat-8.5.38 pranali@172.17.0.6:/home/pranali/Distros 
+

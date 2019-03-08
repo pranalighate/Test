@@ -1,0 +1,3 @@
+java application  it is platform independent
+
+

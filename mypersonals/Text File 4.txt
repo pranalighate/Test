@@ -1,0 +1,203 @@
+[pranali@oc3342480422 ~]$ cd /home/pranali/.ssh
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ls
+id_rsa  id_rsa.pub  known_hosts
+[pranali@oc3342480422 .ssh]$ rm known_hosts 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ls
+id_rsa  id_rsa.pub
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ssh-copy-id root@172.17.0.2
+The authenticity of host '172.17.0.2 (172.17.0.2)' can't be established.
+ECDSA key fingerprint is SHA256:Rw+H3amsK8x2l++XxCXQMg8sKxVaryQP22lrCURyCRg.
+ECDSA key fingerprint is MD5:1f:ed:57:23:16:fc:2c:c5:68:30:65:12:b6:0a:05:ed.
+Are you sure you want to continue connecting (yes/no)? 
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+The authenticity of host '172.17.0.2 (172.17.0.2)' can't be established.
+ECDSA key fingerprint is SHA256:Rw+H3amsK8x2l++XxCXQMg8sKxVaryQP22lrCURyCRg.
+ECDSA key fingerprint is MD5:1f:ed:57:23:16:fc:2c:c5:68:30:65:12:b6:0a:05:ed.
+Are you sure you want to continue connecting (yes/no)? 
+
+/usr/bin/ssh-copy-id: ERROR: Host key verification failed.
+
+[pranali@oc3342480422 .ssh]$ ssh-copy-id root@172.17.0.2
+The authenticity of host '172.17.0.2 (172.17.0.2)' can't be established.
+ECDSA key fingerprint is SHA256:Rw+H3amsK8x2l++XxCXQMg8sKxVaryQP22lrCURyCRg.
+ECDSA key fingerprint is MD5:1f:ed:57:23:16:fc:2c:c5:68:30:65:12:b6:0a:05:ed.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@172.17.0.2's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@172.17.0.2'"
+and check to make sure that only the key(s) you wanted were added.
+
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ssh-copy-id katty@172.17.0.2
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+katty@172.17.0.2's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'katty@172.17.0.2'"
+and check to make sure that only the key(s) you wanted were added.
+
+[pranali@oc3342480422 .ssh]$ cd
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ ssh root@1172.17.0.2
+ssh: Could not resolve hostname 1172.17.0.2: Name or service not known
+[pranali@oc3342480422 ~]$ ssh root@172.17.0.2
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 3.10.0-862.14.4.el7.x86_64 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+root@af28e8203fc2:~# 
+root@af28e8203fc2:~# 
+root@af28e8203fc2:~# 
+root@af28e8203fc2:~# 
+root@af28e8203fc2:~# ifconfig 
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.2  netmask 255.255.0.0  broadcast 0.0.0.0
+        inet6 fe80::42:acff:fe11:2  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
+        RX packets 20337  bytes 52749534 (52.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14879  bytes 1039734 (1.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@af28e8203fc2:~# logout
+Connection to 172.17.0.2 closed.
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ ssh katty@172.17.0.2
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 3.10.0-862.14.4.el7.x86_64 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ 
+katty@af28e8203fc2:~$ logout
+Connection to 172.17.0.2 closed.
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ cd /home/pranali/.ssh/
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ls
+id_rsa  id_rsa.pub  known_hosts
+[pranali@oc3342480422 .ssh]$ rm known_hosts 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ls
+id_rsa  id_rsa.pub
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzemcWSlF+z+gTx1ARx5GhWMtWlhWk3KOjlrb/ilnlranhk/Bn9OSAKxbc6P8LDf3hMoDGYlcCpW2Tcb3dEh7xcWt3boleRFQHXMjMnURILjDLrRL4pKmnmbDTBhMaZ4kh3FRciIXOiYOnktZOeWEklvkFLc6pNV5hF5PtMYqVON7XshpicRvAH7TqsnOErR+tkBEYJemAvn4t4/MZ+H/Lm3vKKOLBNSxVJVvoR9waKE/9HtdgpRmaMeU4AbzW0agww+KLiOhPfW80+X9ADklWM8l8+KPNYrRsKLBFvcLaDBXg0qPHYNTVVl6q+1NQUBdUdG0u4Y0RTOERz++L4WZP pranali@oc3342480422.ibm.com
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ cd
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/pranali/.ssh/id_rsa): ^C
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ 
+[pranali@oc3342480422 ~]$ cd /home/pranali/.ssh/
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ls
+id_rsa  id_rsa.pub
+[pranali@oc3342480422 .ssh]$ 
+[pranali@oc3342480422 .ssh]$ ssh-copy-id @
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
